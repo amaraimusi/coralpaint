@@ -1,17 +1,46 @@
-<?php
-/**
- * Front to the WordPress application. This file doesn't do anything, but loads
- * wp-blog-header.php which does and tells WordPress to load the theme.
- *
- * @package WordPress
- */
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="google" content="notranslate" />
+   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>コーラルペイント</title>
+	<link rel='shortcut icon' href='/home/images/favicon.ico' />
+	
+	<link href="/coralpaint/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/coralpaint/css/common2.css" rel="stylesheet">
+	<script src="/coralpaint/js/jquery.min.js"></script>
+	<script src="/coralpaint/js/bootstrap.min.js"></script>
+	<script src="/coralpaint/js/vue.min.js"></script>
+	<script src="/coralpaint/js/livipage.js"></script>
+	<script src="/coralpaint/js/ImgCompactK.js"></script>
 
-/**
- * Tells WordPress to load the WordPress theme and output it.
- *
- * @var bool
- */
-define( 'WP_USE_THEMES', true );
+</head>
+<body>
+<div id="header" ><h1>コーラルペイント</h1></div>
+<div class="container-fluid" style="">
 
-/** Loads the WordPress Environment and Template */
-require __DIR__ . '/wp-blog-header.php';
+
+<div id="sec1-1" class="sec4">
+	<h3>xxx</h3>
+
+
+	<br><time>2021-5-1</time>
+</div>
+
+
+<div id="sec1-0" class="sec4" style="display:none">
+	<h3>xxx</h3>
+
+
+	<br><time>2021-5-1</time>
+</div>
+
+
+<div class="yohaku"></div>
+
+</div><!-- content -->
+<div id="footer">(C) Coparal paint 2021-9-27</div>
+</body>
+</html>
