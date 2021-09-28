@@ -10,15 +10,23 @@
 	
 	<link href="/coralpaint/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/coralpaint/css/common2.css" rel="stylesheet">
+	<link href="/coralpaint/css/index.css" rel="stylesheet">
 	<script src="/coralpaint/js/jquery.min.js"></script>
 	<script src="/coralpaint/js/bootstrap.min.js"></script>
 	<script src="/coralpaint/js/vue.min.js"></script>
 	<script src="/coralpaint/js/livipage.js"></script>
 	<script src="/coralpaint/js/ImgCompactK.js"></script>
+	<script src="/coralpaint/js/index.js"></script>
 
 </head>
 <body>
-<div id="header" ><h1>コーラルペイント</h1></div>
+
+<div class="bannar">
+	<h1 class="bannar_text">
+		コーラルペイント
+	</h1>
+</div>
+	
 <div class="container-fluid" style="">
 
 
