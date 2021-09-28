@@ -26,6 +26,10 @@
 		コーラルペイント
 	</h1>
 </div>
+
+<div id="header2">
+	<h2>Let's fix the house before it breaks</h2>
+</div>
 	
 <div class="container-fluid" style="">
 
