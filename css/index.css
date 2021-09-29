@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+
+
 .bannar_text {
 	color:white;
 	display: inline-block;
@@ -10,22 +12,46 @@
 }
 .bannar {
 	text-align: center;
-	padding: 100px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 	border: solid 2px;
 	background-image: url(../img/head_title.jpg);
 	background-size:  cover;
 }
 
 #middle1{
-	padding:100px;
+	padding-top:100px;
 	text-align:center
 }
 
 
 #header2{
 	width:100%;
+	text-align:center;
 }
 #header2 h2{
 	padding:20px;
-	text-align:center
+	font-size:2.4em;
+}
+
+.div_a_1{
+	padding:12px;
+}
+
+.div_a_1_1{
+	line-height: 1.4em;
+	font-size:1.6em;
+}
+
+.carousel1_cell{
+	width:240px;
+}
+
+.slick-prev
+{
+    left: -25px;
+}
+.slick-next
+{
+    right: -25px;
 }
