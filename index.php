@@ -20,7 +20,6 @@
 	<title>コーラルペイント</title>
 	<link rel='shortcut icon' href='/home/images/favicon.ico' />
 	
-	<link href="<?php echo URL_BASE; ?>css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo URL_BASE; ?>css/bootstrap-4.3.1-dist/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo URL_BASE; ?>css/common2.css" rel="stylesheet">
 	<link href="<?php echo URL_BASE; ?>js/slick/slick.css" rel="stylesheet">
@@ -28,7 +27,6 @@
 	<link href="<?php echo URL_BASE; ?>css/index.css" rel="stylesheet">
 	
 	<script src="<?php echo URL_BASE; ?>js/jquery.min.js"></script>
-	<script src="<?php echo URL_BASE; ?>js/popper.js"></script><!-- ポップアップ機能およびBootstrapの補助ライブラリ -->
 	<script src="<?php echo URL_BASE; ?>js/bootstrap-4.3.1-dist/bootstrap.min.js"></script>
 	<script src="<?php echo URL_BASE; ?>js/vue.min.js"></script>
 	<script src="<?php echo URL_BASE; ?>js/livipage.js"></script>
@@ -54,7 +52,7 @@
 <div class="row" style="margin-top:40px">
 	<div class="col-12 col-md-6">
 		<div >
-			<img src="/coralpaint/rsc/img/md1/md_DSC_0115.jpg" style="width:100%"  />
+			<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0115.jpg" style="width:100%"  />
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
@@ -86,7 +84,7 @@
 	</div>
 	<div class="col-12 col-md-6">
 		<div >
-			<img src="/coralpaint/rsc/img/md1/md_DSC_0130.jpg" style="width:100%"  />
+			<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0130.jpg" style="width:100%"  />
 		</div>
 	</div>
 </div><!--  row　区分1-1と1-2 -->
@@ -95,7 +93,7 @@
 <div class="row" style="margin-top:80px">
 	<div class="col-12 col-md-6">
 		<div >
-			<img src="/coralpaint/rsc/img/md1/md_DSC_0250.jpg" style="width:100%"  />
+			<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0250.jpg" style="width:100%"  />
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
@@ -115,7 +113,7 @@
     
     	<?php for($i=0;$i<10;$i++){?>
     	<div class='carousel1_cell'>
-    		<img src="/coralpaint/rsc/img/md1/md_DSC_011<?php echo $i ?>.jpg" style="width:100%" />
+    		<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_011<?php echo $i ?>.jpg" style="width:100%" />
     	</div>
     	<?php } ?>
     
@@ -132,7 +130,7 @@
         		<div class="card-body">
         			<h5 class="card-title">カードのタイトル</h5>
         			<div class="card-text">
-        				<img src="/coralpaint/rsc/img/md1/md_DSC_0202.jpg" style="width:100%"  />
+        				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0202.jpg" style="width:100%"  />
         			</div>
         			<div class="card-text">
         				カードのテキスト<br>
@@ -151,7 +149,7 @@
         		<div class="card-body">
         			<h5 class="card-title">カードのタイトル</h5>
         			<div class="card-text">
-        				<img src="/coralpaint/rsc/img/md1/md_DSC_0203.jpg" style="width:100%"  />
+        				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0203.jpg" style="width:100%"  />
         			</div>
         			<div class="card-text">
         				カードのテキスト<br>
@@ -170,7 +168,7 @@
         		<div class="card-body">
         			<h5 class="card-title">カードのタイトル</h5>
         			<div class="card-text">
-        				<img src="/coralpaint/rsc/img/md1/md_DSC_0204.jpg" style="width:100%"  />
+        				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0204.jpg" style="width:100%"  />
         			</div>
         			<div class="card-text">
         				カードのテキスト<br>
@@ -189,7 +187,7 @@
         		<div class="card-body">
         			<h5 class="card-title">カードのタイトル</h5>
         			<div class="card-text">
-        				<img src="/coralpaint/rsc/img/md1/md_DSC_0205.jpg" style="width:100%"  />
+        				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0205.jpg" style="width:100%"  />
         			</div>
         			<div class="card-text">
         				カードのテキスト<br>
