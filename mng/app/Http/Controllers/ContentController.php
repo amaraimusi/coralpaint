@@ -99,29 +99,28 @@ class ContentController extends AppController
 		
 		$ent = $this->md->saveEntity($ent, $regParam);
 		
-		// CBBXS-2025
+		
+		
 		// ファイルアップロードとファイル名のDB保存
 		if(!empty($_FILES)){
 			// CBBXS-2027
-			$img_fp = $this->cb->makeFilePath($_FILES, "storage/neko/y%Y/{$ent['id']}/%unique/orig/%fn", $ent, 'img_fp');
+			$img_fp = $this->cb->makeFilePath($_FILES, "storage/Content/y%Y/{$ent['id']}/%unique/orig/%fn", $ent, 'img_fp');
 			$fileUploadK = $this->factoryFileUploadK();
 			
 			// ▼旧ファイルを指定ディレクトリごと削除する。
 			$ary = explode("/", $img_fp);
 			$ary = array_slice($ary, 0, 4);
 			$del_dp = implode('/', $ary);
-			$fileUploadK->removeDirectory($del_dp); // 旧ファイルを指定ディレクトリごと削除
-			
-			// ファイル配置＆DB保存
+ 			$fileUploadK->removeDirectory($del_dp); // 旧ファイルを指定ディレクトリごと削除
+ 			
+ 			// ファイル配置＆DB保存
 			$fileUploadK->putFile1($_FILES, 'img_fp', $img_fp);
 			$ent['img_fp'] = $img_fp;
-			$this->md->saveEntity($ent, $regParam);
-			// CBBXE
-		}
+			$this->md->save($ent, ['validate'=>false]);
 
 			// CBBXE
 		}
-		// CBBXE
+		
 		
 		$json_str = json_encode($ent, JSON_HEX_TAG | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_HEX_APOS); // JSONに変換
 		

@@ -90,11 +90,15 @@ class PageController extends AppController
 		
 		$ent = $this->md->saveEntity($ent, $regParam);
 		
-		// CBBXS-2025
+		
+		
+		// ファイルアップロードとファイル名のDB保存
+		if(!empty($_FILES)){
+			// CBBXS-2027
 
 			// CBBXE
 		}
-		// CBBXE
+		
 		
 		$json_str = json_encode($ent, JSON_HEX_TAG | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_HEX_APOS); // JSONに変換
 		
