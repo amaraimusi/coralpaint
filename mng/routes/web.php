@@ -35,6 +35,24 @@ use Illuminate\Support\Facades\Route;
 	Route::get('neko/csv_download', 'NekoController@csv_download');
 	Route::post('neko/bulk_reg', 'NekoController@bulk_reg');
 	
+	// Content
+	Route::get('content', 'ContentController@index');
+	Route::post('content/ajax_reg', 'ContentController@ajax_reg');
+	Route::post('content/ajax_delete', 'ContentController@ajax_delete');
+	Route::post('content/auto_save', 'ContentController@auto_save');
+	Route::post('content/ajax_pwms', 'ContentController@ajax_pwms');
+	Route::get('content/csv_download', 'ContentController@csv_download');
+	Route::post('content/bulk_reg', 'ContentController@bulk_reg');
+	
+	// Page
+	Route::get('page', 'PageController@index');
+	Route::post('page/ajax_reg', 'PageController@ajax_reg');
+	Route::post('page/ajax_delete', 'PageController@ajax_delete');
+	Route::post('page/auto_save', 'PageController@auto_save');
+	Route::post('page/ajax_pwms', 'PageController@ajax_pwms');
+	Route::get('page/csv_download', 'PageController@csv_download');
+	Route::post('page/bulk_reg', 'PageController@bulk_reg');
+	
 	// UserMng
 	Route::get('user_mng', 'UserMngController@index');
 	Route::post('user_mng/ajax_reg', 'UserMngController@ajax_reg');
