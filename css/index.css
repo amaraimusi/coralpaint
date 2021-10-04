@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
-
+#fixed_title{
+	position:fixed;
+	top:12px; 
+	left:0px;
+	z-index:2;
+}
 
 .bannar_text {
 	color:white;

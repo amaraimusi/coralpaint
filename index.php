@@ -36,11 +36,14 @@
 </head>
 <body>
 
+<div id="fixed_title" style="width:40%;max-width:320px"><img src="<?php echo URL_BASE; ?>img/fixed_title.png" style="width:100%" /></div>
+
 <div class="bannar">
 	<h1 class="bannar_text">
 		コーラルペイント
 	</h1>
 </div>
+
 
 <div id="header2">
 	<h2>Let's fix the house before it breaks</h2>
