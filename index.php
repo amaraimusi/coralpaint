@@ -45,8 +45,8 @@
 </div>
 
 
-<div id="header2">
-	<h2>Let's fix the house before it breaks</h2>
+<div id="header2" >
+	<img src="<?php echo URL_BASE; ?>img/header2.png" alt="Let's fix the house before it breaks"  style="width:70%" />
 </div>
 	
 <div class="container-fluid" style="padding:0px">
@@ -55,15 +55,15 @@
 <div class="row" style="margin-top:40px">
 	<div class="col-12 col-md-6">
 		<div >
-			<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0115.jpg" style="width:100%"  />
+			<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0115.jpg" class="img_a"  />
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
-		<div class="div_a_1">
+		<div class="text_a">
 			<div>
-				<h3>見出し1</h3>
+				<h3 class="text_a_midasi">見出し1</h3>
 			</div>
-			<div class="div_a_1_1">
+			<div class="text_a_body">
 そこで神はそれらを祝福して言った。「子を生み，増えて，海の水の中でいっぱいになれ+。飛ぶ生き物は，地上で増えよ」。 23 こうして，晩になり朝になり，5日目が過ぎた。
 
 24 神は言った。「陸に，さまざまな種類の生き物が現れよ。さまざまな種類の家畜と野生動物と地面を動く生き物*である+」。するとそのようになった。 25 神は，さまざまな種類の野生動物，さまざまな種類の家畜，地面を動くさまざまな種類の生き物を造った。神が見ると，それは良かった。
@@ -72,48 +72,52 @@
 	</div>
 </div><!--  row　区分1-1と1-2 -->
 
+<div class="belt_a"></div>
+
 
 <div class="row" style="margin-top:80px">
 
 	<div class="col-12 col-md-6">
-		<div class="div_a_1">
+		<div class="text_a">
 			<div>
-				<h3>見出し2</h3>
+				<h3 class="text_a_midasi">見出し2</h3>
 			</div>
-			<div class="div_a_1_1">
+			<div class="text_a_body">
 ネブカドネザルは治世の第2年に，何度か夢を見て心が落ち着かず+，眠れなくなった。 2 それで王は，夢について説明させるために，魔術師，まじない師，呪術師，カルデア人*を招集するよう命じた。その者たちはやって来て，王の前に立った+。 3 王は彼らに言った。「私はある夢を見た。その夢で見たのが何だったのか知りたくて，心が落ち着かない」。 4 カルデア人たちはアラム語+で王に答えた*。「王がいつまでも生き続けますように。どのような夢かを私どもにお話しください。そうすれば解き明かします」。
 			</div>
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
 		<div >
-			<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0130.jpg" style="width:100%"  />
+			<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0130.jpg"  class="img_a"   />
 		</div>
 	</div>
 </div><!--  row　区分1-1と1-2 -->
+
+<div class="belt_a"></div>
 
 
 <div class="row" style="margin-top:80px">
 	<div class="col-12 col-md-6">
 		<div >
-			<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0250.jpg" style="width:100%"  />
+			<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0250.jpg"  class="img_a"   />
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
-		<div class="div_a_1">
+		<div class="text_a">
 			<div>
-				<h3>見出し3</h3>
+				<h3 class="text_a_midasi" >見出し3</h3>
 			</div>
-			<div class="div_a_1_1">
+			<div class="text_a_body">
 別の安息日のこと，イエスは会堂に入って教え始めた。そこに，右手がまひした*男性がいた+。 7 律法学者とパリサイ派の人たちは，イエスが安息日に治すのかどうか，じっと見ていた。イエスを訴える理由を見つけようとしてだった
 			</div>
 		</div>
 	</div>
 </div><!--  row　区分1-1と1-2 -->
 
-<div style="height:60px;width:100%;margin-top:80px;background-color:#64a8d9"></div>
+<div class="belt_a"></div>
 
-<div style="margin-top:80px;padding-left:30px;padding-right:30px;background-color:#dd5044">
+<div class="carousel_w" >
     <div id="carousel1" >
     
     	<?php for($i=0;$i<10;$i++){?>
@@ -147,8 +151,8 @@
     	
     	
     	<div class="col-12 col-md-3">
-    		<div class="card border-primary mb-3">
-        		<div class="card-header">
+    		<div class="card border-primary mb-3" style="border-width:2px;">
+        		<div class="card-header bg-primary text-light" style="border-radius:0px;">
         			カードのテスト
         		</div>
         		<div class="card-body">
@@ -207,6 +211,6 @@
 <div class="yohaku"></div>
 
 </div><!-- content -->
-<div id="footer">(C) Coparal paint 2021-9-27</div>
+<div id="footer" style="background-color:#64a8d9">(C) Coral Paint 2021-9-27</div>
 </body>
 </html>

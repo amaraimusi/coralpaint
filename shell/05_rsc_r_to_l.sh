@@ -2,7 +2,7 @@
 echo 'work1リソースのダウンロード'
 
 
-scp -r amaraimusi@amaraimusi.sakura.ne.jp:www/coralpaint/img/work1 ../img
+scp -r amaraimusi@amaraimusi.sakura.ne.jp:www/coralpaint/rsc ../
 
 echo "------------ 完了"
 cmd /k
