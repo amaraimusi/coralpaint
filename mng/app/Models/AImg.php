@@ -4,23 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Content extends Model
+class AImg extends Model
 {
-	protected $table = 'contents'; // 紐づけるテーブル名
+	protected $table = 'a_imgs'; // 紐づけるテーブル名
 	//protected $guarded = ['id']; // 予期せぬ代入をガード。 通常、主キーフィールドや、パスワードフィールドなどが指定される。
 	
 	// ホワイトリスト（DB保存時にこのホワイトリストでフィルタリングが施される）
 	public $fillable = [
 			// CBBXS-2009
 			'id',
-			'page_id',
-			'code',
-			'content_name',
-			'text1',
-			'midasi1',
-			'img_flg',
 			'img_fp',
-			'a_img_id',
 			'sort_no',
 			'delete_flg',
 			'update_user',
@@ -96,7 +89,7 @@ class Content extends Model
 		
 		$str_fields = implode(",", $fields);
 
-		$query = \DB::table('contents as Content');
+		$query = \DB::table('a_imgs as AImg');
 		$query->selectRaw('SQL_CALC_FOUND_ROWS ' . $str_fields);
 		if(!empty($conditions)) $query->whereRaw($conditions);
 		if(!empty($offset)) $query->offset($offset);
@@ -135,62 +128,38 @@ class Content extends Model
 		$kjs = $this->cb->xssSanitizeW($kjs); // SQLサニタイズ
 		
 		if(!empty($kjs['kj_main'])){
-			$cnds[]="CONCAT( IFNULL(Content.content_name, '') ,IFNULL(Content.note, '')) LIKE '%{$kjs['kj_main']}%'";
+			$cnds[]="CONCAT( IFNULL(AImg.a_img_name, '') ,IFNULL(AImg.note, '')) LIKE '%{$kjs['kj_main']}%'";
 		}
 		
 		// CBBXS-1003
 		if(!empty($kjs['kj_id']) || $kjs['kj_id'] ==='0' || $kjs['kj_id'] ===0){
-			$cnds[]="Content.id = {$kjs['kj_id']}";
-		}
-		if(!empty($kjs['kj_page_id']) || $kjs['kj_page_id'] ==='0' || $kjs['kj_page_id'] ===0){
-			$cnds[]="Content.page_id = {$kjs['kj_page_id']}";
-		}
-		if(!empty($kjs['kj_code'])){
-			$cnds[]="Content.code LIKE '%{$kjs['kj_code']}%'";
-		}
-		if(!empty($kjs['kj_content_name'])){
-			$cnds[]="Content.content_name LIKE '%{$kjs['kj_content_name']}%'";
-		}
-		if(!empty($kjs['kj_text1'])){
-			$cnds[]="Content.text1 LIKE '%{$kjs['kj_text1']}%'";
-		}
-		if(!empty($kjs['kj_midasi1'])){
-			$cnds[]="Content.midasi1 LIKE '%{$kjs['kj_midasi1']}%'";
-		}
-		$kj_img_flg = $kjs['kj_img_flg'];
-		if(!empty($kjs['kj_img_flg']) || $kjs['kj_img_flg'] ==='0' || $kjs['kj_img_flg'] ===0){
-			if($kjs['kj_img_flg'] != -1){
-				$cnds[]="Content.img_flg = {$kjs['kj_img_flg']}";
-			}
+			$cnds[]="AImg.id = {$kjs['kj_id']}";
 		}
 		if(!empty($kjs['kj_img_fp'])){
-			$cnds[]="Content.img_fp LIKE '%{$kjs['kj_img_fp']}%'";
-		}
-		if(!empty($kjs['kj_a_img_id']) || $kjs['kj_a_img_id'] ==='0' || $kjs['kj_a_img_id'] ===0){
-			$cnds[]="Content.a_img_id = {$kjs['kj_a_img_id']}";
+			$cnds[]="AImg.img_fp LIKE '%{$kjs['kj_img_fp']}%'";
 		}
 		if(!empty($kjs['kj_sort_no']) || $kjs['kj_sort_no'] ==='0' || $kjs['kj_sort_no'] ===0){
-			$cnds[]="Content.sort_no = {$kjs['kj_sort_no']}";
+			$cnds[]="AImg.sort_no = {$kjs['kj_sort_no']}";
 		}
 		$kj_delete_flg = $kjs['kj_delete_flg'];
 		if(!empty($kjs['kj_delete_flg']) || $kjs['kj_delete_flg'] ==='0' || $kjs['kj_delete_flg'] ===0){
 			if($kjs['kj_delete_flg'] != -1){
-			   $cnds[]="Content.delete_flg = {$kjs['kj_delete_flg']}";
+			   $cnds[]="AImg.delete_flg = {$kjs['kj_delete_flg']}";
 			}
 		}
 		if(!empty($kjs['kj_update_user'])){
-			$cnds[]="Content.update_user LIKE '%{$kjs['kj_update_user']}%'";
+			$cnds[]="AImg.update_user LIKE '%{$kjs['kj_update_user']}%'";
 		}
 		if(!empty($kjs['kj_ip_addr'])){
-			$cnds[]="Content.ip_addr LIKE '%{$kjs['kj_ip_addr']}%'";
+			$cnds[]="AImg.ip_addr LIKE '%{$kjs['kj_ip_addr']}%'";
 		}
 		if(!empty($kjs['kj_created'])){
 			$kj_created=$kjs['kj_created'].' 00:00:00';
-			$cnds[]="Content.created >= '{$kj_created}'";
+			$cnds[]="AImg.created >= '{$kj_created}'";
 		}
 		if(!empty($kjs['kj_modified'])){
 			$kj_modified=$kjs['kj_modified'].' 00:00:00';
-			$cnds[]="Content.modified >= '{$kj_modified}'";
+			$cnds[]="AImg.modified >= '{$kj_modified}'";
 		}
 
 		// CBBXE

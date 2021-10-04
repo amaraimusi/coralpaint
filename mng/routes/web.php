@@ -53,6 +53,15 @@ use Illuminate\Support\Facades\Route;
 	Route::get('page/csv_download', 'PageController@csv_download');
 	Route::post('page/bulk_reg', 'PageController@bulk_reg');
 	
+	// Img
+	Route::get('a_img', 'AImgController@index');
+	Route::post('a_img/ajax_reg', 'AImgController@ajax_reg');
+	Route::post('a_img/ajax_delete', 'AImgController@ajax_delete');
+	Route::post('a_img/auto_save', 'AImgController@auto_save');
+	Route::post('a_img/ajax_pwms', 'AImgController@ajax_pwms');
+	Route::get('a_img/csv_download', 'AImgController@csv_download');
+	Route::post('a_img/bulk_reg', 'AImgController@bulk_reg');
+	
 	// UserMng
 	Route::get('user_mng', 'UserMngController@index');
 	Route::post('user_mng/ajax_reg', 'UserMngController@ajax_reg');
@@ -62,14 +71,6 @@ use Illuminate\Support\Facades\Route;
 	Route::get('user_mng/csv_download', 'UserMngController@csv_download');
 	Route::post('user_mng/bulk_reg', 'UserMngController@bulk_reg');
 	
-	// Yagi
-	Route::get('yagi', 'YagiController@index');
-	Route::post('yagi/ajax_reg', 'YagiController@ajax_reg');
-	Route::post('yagi/ajax_delete', 'YagiController@ajax_delete');
-	Route::post('yagi/auto_save', 'YagiController@auto_save');
-	Route::post('yagi/ajax_pwms', 'YagiController@ajax_pwms');
-	Route::get('yagi/csv_download', 'YagiController@csv_download');
-	Route::post('yagi/bulk_reg', 'YagiController@bulk_reg');
 	
 	Route::get('/home', 'HomeController@index')->name('welcome');
 	//Route::get('/home', 'HomeController@neko')->name('neko');

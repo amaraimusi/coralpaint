@@ -108,6 +108,8 @@
 	</div>
 </div><!--  row　区分1-1と1-2 -->
 
+<div style="height:60px;width:100%;margin-top:80px;background-color:#64a8d9"></div>
+
 <div style="margin-top:80px;padding-left:30px;padding-right:30px;background-color:#dd5044">
     <div id="carousel1" >
     
