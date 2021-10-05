@@ -1,6 +1,11 @@
 
 <?php 
-
+    require_once 'crud_base_config.php';
+    
+    require_once 'controller/HomeController.php';
+    $homeCon = new HomeController();
+    $box = $homeCon->indexAction();
+    $data = $box;
 
     if(strpos($_SERVER['SERVER_NAME'], 'localhost') !== false){
         define('URL_BASE', '/coralpaint/');
@@ -55,19 +60,15 @@
 <div class="row" style="margin-top:40px">
 	<div class="col-12 col-md-6">
 		<div >
-			<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0115.jpg" class="img_a"  />
+			<img src="<?php  echo $data[4]['img_fp']; ?>" class="img_a"  />
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
 		<div class="text_a">
 			<div>
-				<h3 class="text_a_midasi">見出し1</h3>
+				<h3 class="text_a_midasi"><?php echo $data[4]['midasi1']; ?></h3>
 			</div>
-			<div class="text_a_body">
-そこで神はそれらを祝福して言った。「子を生み，増えて，海の水の中でいっぱいになれ+。飛ぶ生き物は，地上で増えよ」。 23 こうして，晩になり朝になり，5日目が過ぎた。
-
-24 神は言った。「陸に，さまざまな種類の生き物が現れよ。さまざまな種類の家畜と野生動物と地面を動く生き物*である+」。するとそのようになった。 25 神は，さまざまな種類の野生動物，さまざまな種類の家畜，地面を動くさまざまな種類の生き物を造った。神が見ると，それは良かった。
-			</div>
+			<div class="text_a_body" ><?php echo $data[4]['text1']; ?></div>
 		</div>
 	</div>
 </div><!--  row　区分1-1と1-2 -->

@@ -54,6 +54,8 @@
 	padding:6px;
 	font-size:1.6em;
 	line-height:1.6em;
+	white-space:pre-wrap;
+	word-wrap:break-word;
 }
 
 .img_a{
