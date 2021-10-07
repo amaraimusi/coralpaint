@@ -65,7 +65,7 @@
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
-		<div class="text_a">
+		<div class="text_a back_img_a">
 			<div>
 				<h3 class="text_a_midasi"><?php echo $data[4]['midasi1']; ?></h3>
 			</div>
@@ -80,7 +80,7 @@
 <div class="row" style="margin-top:80px">
 
 	<div class="col-12 col-md-6">
-		<div class="text_a">
+		<div class="text_a back_img_b">
 			<div>
 				<h3 class="text_a_midasi"><?php echo $data[5]['midasi1']; ?></h3>
 			</div>
@@ -104,7 +104,7 @@
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
-		<div class="text_a">
+		<div class="text_a back_img_c">
 			<div>
 				<h3 class="text_a_midasi" ><?php echo $data[6]['midasi1']; ?></h3>
 			</div>
