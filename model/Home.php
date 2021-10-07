@@ -118,10 +118,23 @@ class Home{
         
         foreach($data as &$ent){
             if(empty($ent['a_img_id'])) continue;
-            if(!empty($ent['img_fp'])) continue;
-            $a_img_id = $ent['a_img_id'];
-            if(empty($aImgHm[$a_img_id])) continue;
-            $ent['img_fp'] = $aImgHm[$a_img_id];
+            
+            if(!empty($ent['img_fp'])) {
+                $img_fp = $ent['img_fp'];
+                $img_fp_md = str_replace( '/orig/', '/md/', $img_fp);
+                $ent['img_fp_md'] = $img_fp_md;
+            }else{
+                // A画像ファイルパスをセット
+                $a_img_id = $ent['a_img_id'];
+                if(empty($aImgHm[$a_img_id])) continue;
+                $img_fp = $aImgHm[$a_img_id];
+                $ent['img_fp'] = $img_fp;
+                $img_fp_md = str_replace( '/orig/', '/md/', $img_fp);
+                $ent['img_fp_md'] = $img_fp_md;
+            }
+            
+            
+
         }
         unset($ent);
         
@@ -145,6 +158,29 @@ class Home{
        
         return $data2;
     }
+    
+    
+    /**
+     * カルーセルデータを取得する
+     */
+    public function getCarousels(){
+        $sql = "SELECT * FROM contents WHERE page_id = 2 ORDER BY sort_no";
+        $data = $this->dao->getData($sql);
+
+        $aImgIds = $this->extractAImgIds($data); // コンテンツデータからA画像IDリストを抽出する。
+        
+        $aImgData = $this->getAImgData($aImgIds); // A画像IDリストに紐づくA画像データを取得する
+        
+        $aImgHm = $this->convImgDataToHashmap($aImgData); // A画像データをA画像ハッシュマップに構造変換する
+        
+        $data = $this->setAImgHmInData($data, $aImgHm); // データにA画像ハッシュマップをセットする。
+        
+        $data2 = $this->convDataToHashmap($data); // IDをキーとしたハッシュマップ構造に変換する
+        
+        return $data2;
+        
+    }
+    
     
     
 }

@@ -24,7 +24,10 @@ class HomeController{
         $data = $this->md->getContensData(); // コンテンツデータをDBから取得する
         $data = $this->md->convContensData($data); // コンテンツデータの変換
         
-        $box = $data;
+        $carousels = $this->md->getCarousels(); // カルーセルデータを取得する
+        
+        $box['data'] = $data;
+        $box['carousels'] = $carousels;
         return $box;
     }
     

@@ -5,12 +5,13 @@
     require_once 'controller/HomeController.php';
     $homeCon = new HomeController();
     $box = $homeCon->indexAction();
-    $data = $box;
+    $data = $box['data'];
+    $carousels = $box['carousels'];
 
     if(strpos($_SERVER['SERVER_NAME'], 'localhost') !== false){
-        define('URL_BASE', '/coralpaint/');
+	   define('URL_BASE', '/coralpaint/');
     }else{
-        define('URL_BASE', '/');
+	   define('URL_BASE', '/');
     }
 
 ?>
@@ -60,7 +61,7 @@
 <div class="row" style="margin-top:40px">
 	<div class="col-12 col-md-6">
 		<div >
-			<img src="<?php  echo $data[4]['img_fp']; ?>" class="img_a"  />
+			<img src="<?php  echo $data[4]['img_fp_md']; ?>" class="img_a"  />
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
@@ -81,16 +82,14 @@
 	<div class="col-12 col-md-6">
 		<div class="text_a">
 			<div>
-				<h3 class="text_a_midasi">見出し2</h3>
+				<h3 class="text_a_midasi"><?php echo $data[5]['midasi1']; ?></h3>
 			</div>
-			<div class="text_a_body">
-ネブカドネザルは治世の第2年に，何度か夢を見て心が落ち着かず+，眠れなくなった。 2 それで王は，夢について説明させるために，魔術師，まじない師，呪術師，カルデア人*を招集するよう命じた。その者たちはやって来て，王の前に立った+。 3 王は彼らに言った。「私はある夢を見た。その夢で見たのが何だったのか知りたくて，心が落ち着かない」。 4 カルデア人たちはアラム語+で王に答えた*。「王がいつまでも生き続けますように。どのような夢かを私どもにお話しください。そうすれば解き明かします」。
-			</div>
+				<div class="text_a_body" ><?php echo $data[5]['text1']; ?></div>
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
 		<div >
-			<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0130.jpg"  class="img_a"   />
+			<img src="<?php  echo $data[5]['img_fp_md']; ?>" class="img_a"  />
 		</div>
 	</div>
 </div><!--  row　区分1-1と1-2 -->
@@ -101,17 +100,15 @@
 <div class="row" style="margin-top:80px">
 	<div class="col-12 col-md-6">
 		<div >
-			<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0250.jpg"  class="img_a"   />
+			<img src="<?php  echo $data[6]['img_fp_md']; ?>" class="img_a"  />
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
 		<div class="text_a">
 			<div>
-				<h3 class="text_a_midasi" >見出し3</h3>
+				<h3 class="text_a_midasi" ><?php echo $data[6]['midasi1']; ?></h3>
 			</div>
-			<div class="text_a_body">
-別の安息日のこと，イエスは会堂に入って教え始めた。そこに，右手がまひした*男性がいた+。 7 律法学者とパリサイ派の人たちは，イエスが安息日に治すのかどうか，じっと見ていた。イエスを訴える理由を見つけようとしてだった
-			</div>
+			<div class="text_a_body" ><?php echo $data[6]['text1']; ?></div>
 		</div>
 	</div>
 </div><!--  row　区分1-1と1-2 -->
@@ -121,11 +118,11 @@
 <div class="carousel_w" >
     <div id="carousel1" >
     
-    	<?php for($i=0;$i<10;$i++){?>
-    	<div class='carousel1_cell'>
-    		<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_011<?php echo $i ?>.jpg" style="width:100%" />
-    	</div>
-    	<?php } ?>
+    	<?php
+    	   foreach($carousels as $crsEnt){
+    		  echo "<img src='{$crsEnt['img_fp_md']}' style='width:100%' />";
+    	   }
+    	?>
     
     </div>
 </div>
@@ -134,77 +131,77 @@
     <div class="row" style="margin-top:80px">
     	<div class="col-12 col-md-3">
     		<div class="card border-primary mb-3">
-        		<div class="card-header">
-        			カードのテスト
-        		</div>
-        		<div class="card-body">
-        			<h5 class="card-title">カードのタイトル</h5>
-        			<div class="card-text">
-        				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0202.jpg" style="width:100%"  />
-        			</div>
-        			<div class="card-text">
-        				カードのテキスト<br>
-        				聖書は神を1つの固有の名前で呼んでいますが，数多くの称号や描写を用いて神について述べています。
-        			</div>
-        		</div>
-        	</div>
+	   		<div class="card-header">
+	   			カードのテスト
+	   		</div>
+	   		<div class="card-body">
+	   			<h5 class="card-title">カードのタイトル</h5>
+	   			<div class="card-text">
+	   				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0202.jpg" style="width:100%"  />
+	   			</div>
+	   			<div class="card-text">
+	   				カードのテキスト<br>
+	   				聖書は神を1つの固有の名前で呼んでいますが，数多くの称号や描写を用いて神について述べています。
+	   			</div>
+	   		</div>
+	   	</div>
     	</div>
     	
     	
     	<div class="col-12 col-md-3">
     		<div class="card border-primary mb-3" style="border-width:2px;">
-        		<div class="card-header bg-primary text-light" style="border-radius:0px;">
-        			カードのテスト
-        		</div>
-        		<div class="card-body">
-        			<h5 class="card-title">カードのタイトル</h5>
-        			<div class="card-text">
-        				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0203.jpg" style="width:100%"  />
-        			</div>
-        			<div class="card-text">
-        				カードのテキスト<br>
-        				聖書は神を1つの固有の名前で呼んでいますが，数多くの称号や描写を用いて神について述べています。
-        			</div>
-        		</div>
-        	</div>
+	   		<div class="card-header bg-primary text-light" style="border-radius:0px;">
+	   			カードのテスト
+	   		</div>
+	   		<div class="card-body">
+	   			<h5 class="card-title">カードのタイトル</h5>
+	   			<div class="card-text">
+	   				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0203.jpg" style="width:100%"  />
+	   			</div>
+	   			<div class="card-text">
+	   				カードのテキスト<br>
+	   				聖書は神を1つの固有の名前で呼んでいますが，数多くの称号や描写を用いて神について述べています。
+	   			</div>
+	   		</div>
+	   	</div>
     	</div>
     	
     	
     	<div class="col-12 col-md-3">
     		<div class="card border-primary mb-3">
-        		<div class="card-header">
-        			カードのテスト
-        		</div>
-        		<div class="card-body">
-        			<h5 class="card-title">カードのタイトル</h5>
-        			<div class="card-text">
-        				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0204.jpg" style="width:100%"  />
-        			</div>
-        			<div class="card-text">
-        				カードのテキスト<br>
-        				聖書は神を1つの固有の名前で呼んでいますが，数多くの称号や描写を用いて神について述べています。
-        			</div>
-        		</div>
-        	</div>
+	   		<div class="card-header">
+	   			カードのテスト
+	   		</div>
+	   		<div class="card-body">
+	   			<h5 class="card-title">カードのタイトル</h5>
+	   			<div class="card-text">
+	   				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0204.jpg" style="width:100%"  />
+	   			</div>
+	   			<div class="card-text">
+	   				カードのテキスト<br>
+	   				聖書は神を1つの固有の名前で呼んでいますが，数多くの称号や描写を用いて神について述べています。
+	   			</div>
+	   		</div>
+	   	</div>
     	</div>
     	
     	
     	<div class="col-12 col-md-3">
     		<div class="card border-primary mb-3">
-        		<div class="card-header">
-        			カードのテスト
-        		</div>
-        		<div class="card-body">
-        			<h5 class="card-title">カードのタイトル</h5>
-        			<div class="card-text">
-        				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0205.jpg" style="width:100%"  />
-        			</div>
-        			<div class="card-text">
-        				カードのテキスト<br>
-        				聖書は神を1つの固有の名前で呼んでいますが，数多くの称号や描写を用いて神について述べています。
-        			</div>
-        		</div>
-        	</div>
+	   		<div class="card-header">
+	   			カードのテスト
+	   		</div>
+	   		<div class="card-body">
+	   			<h5 class="card-title">カードのタイトル</h5>
+	   			<div class="card-text">
+	   				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0205.jpg" style="width:100%"  />
+	   			</div>
+	   			<div class="card-text">
+	   				カードのテキスト<br>
+	   				聖書は神を1つの固有の名前で呼んでいますが，数多くの称号や描写を用いて神について述べています。
+	   			</div>
+	   		</div>
+	   	</div>
     	</div>
     </div>
 </div>
