@@ -129,80 +129,71 @@
 
 <div style="padding:10px">
     <div class="row" style="margin-top:80px">
+    
     	<div class="col-12 col-md-3">
     		<div class="card border-primary mb-3">
-	   		<div class="card-header">
-	   			カードのテスト
+    	   		<h5 class="card-header">
+    	   			<?php echo $data[14]['midasi1']?>
+    	   		</h5>
+    	   		<div class="card-body">
+    	   			<div class="card-text">
+    	   				<img src="<?php echo $data[14]['img_fp_md']; ?>" style="width:100%"  />
+    	   			</div>
+    	   			<div class="card-text card_text_ex" >
+    	   				<?php echo $data[14]['text1']?>
+    	   			</div>
+    	   		</div>
 	   		</div>
-	   		<div class="card-body">
-	   			<h5 class="card-title">カードのタイトル</h5>
-	   			<div class="card-text">
-	   				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0202.jpg" style="width:100%"  />
-	   			</div>
-	   			<div class="card-text">
-	   				カードのテキスト<br>
-	   				聖書は神を1つの固有の名前で呼んでいますが，数多くの称号や描写を用いて神について述べています。
-	   			</div>
-	   		</div>
-	   	</div>
     	</div>
-    	
-    	
-    	<div class="col-12 col-md-3">
-    		<div class="card border-primary mb-3" style="border-width:2px;">
-	   		<div class="card-header bg-primary text-light" style="border-radius:0px;">
-	   			カードのテスト
-	   		</div>
-	   		<div class="card-body">
-	   			<h5 class="card-title">カードのタイトル</h5>
-	   			<div class="card-text">
-	   				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0203.jpg" style="width:100%"  />
-	   			</div>
-	   			<div class="card-text">
-	   				カードのテキスト<br>
-	   				聖書は神を1つの固有の名前で呼んでいますが，数多くの称号や描写を用いて神について述べています。
-	   			</div>
-	   		</div>
-	   	</div>
-    	</div>
-    	
-    	
+    
     	<div class="col-12 col-md-3">
     		<div class="card border-primary mb-3">
-	   		<div class="card-header">
-	   			カードのテスト
+    	   		<h5 class="card-header">
+    	   			<?php echo $data[15]['midasi1']?>
+    	   		</h5>
+    	   		<div class="card-body">
+    	   			<div class="card-text">
+    	   				<img src="<?php echo $data[15]['img_fp_md']; ?>" style="width:100%"  />
+    	   			</div>
+    	   			<div class="card-text card_text_ex">
+    	   				<?php echo $data[15]['text1']?>
+    	   			</div>
+    	   		</div>
 	   		</div>
-	   		<div class="card-body">
-	   			<h5 class="card-title">カードのタイトル</h5>
-	   			<div class="card-text">
-	   				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0204.jpg" style="width:100%"  />
-	   			</div>
-	   			<div class="card-text">
-	   				カードのテキスト<br>
-	   				聖書は神を1つの固有の名前で呼んでいますが，数多くの称号や描写を用いて神について述べています。
-	   			</div>
-	   		</div>
-	   	</div>
     	</div>
-    	
-    	
+    
     	<div class="col-12 col-md-3">
     		<div class="card border-primary mb-3">
-	   		<div class="card-header">
-	   			カードのテスト
+    	   		<h5 class="card-header">
+    	   			<?php echo $data[16]['midasi1']?>
+    	   		</h5>
+    	   		<div class="card-body">
+    	   			<div class="card-text">
+    	   				<img src="<?php echo $data[16]['img_fp_md']; ?>" style="width:100%"  />
+    	   			</div>
+    	   			<div class="card-text card_text_ex">
+    	   				<?php echo $data[16]['text1']?>
+    	   			</div>
+    	   		</div>
 	   		</div>
-	   		<div class="card-body">
-	   			<h5 class="card-title">カードのタイトル</h5>
-	   			<div class="card-text">
-	   				<img src="<?php echo URL_BASE; ?>rsc/img/md1/md_DSC_0205.jpg" style="width:100%"  />
-	   			</div>
-	   			<div class="card-text">
-	   				カードのテキスト<br>
-	   				聖書は神を1つの固有の名前で呼んでいますが，数多くの称号や描写を用いて神について述べています。
-	   			</div>
-	   		</div>
-	   	</div>
     	</div>
+    
+    	<div class="col-12 col-md-3">
+    		<div class="card border-primary mb-3">
+    	   		<h5 class="card-header">
+    	   			<?php echo $data[17]['midasi1']?>
+    	   		</h5>
+    	   		<div class="card-body">
+    	   			<div class="card-text">
+    	   				<img src="<?php echo $data[17]['img_fp_md']; ?>" style="width:100%"  />
+    	   			</div>
+    	   			<div class="card-text card_text_ex">
+    	   				<?php echo $data[17]['text1']?>
+    	   			</div>
+    	   		</div>
+	   		</div>
+    	</div>
+
     </div>
 </div>
 
