@@ -117,13 +117,18 @@ class Home{
         if(empty($aImgHm)) return [];
         
         foreach($data as &$ent){
-            if(empty($ent['a_img_id'])) continue;
+            
             
             if(!empty($ent['img_fp'])) {
+                // アップロード型である場合
                 $img_fp = $ent['img_fp'];
+                $img_fp = '/coralpaint_mng/public/' . $img_fp;
                 $img_fp_md = str_replace( '/orig/', '/md/', $img_fp);
+                $ent['img_fp'] = $img_fp;
                 $ent['img_fp_md'] = $img_fp_md;
+                
             }else{
+                if(empty($ent['a_img_id'])) continue;
                 // A画像ファイルパスをセット
                 $a_img_id = $ent['a_img_id'];
                 if(empty($aImgHm[$a_img_id])) continue;

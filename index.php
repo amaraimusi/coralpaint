@@ -24,7 +24,7 @@
    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
    	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>コーラルペイント</title>
-	<link rel='shortcut icon' href='/home/images/favicon.ico' />
+	<link rel='shortcut icon' href='img/favicon.ico' />
 	
 	<link href="<?php echo URL_BASE; ?>css/bootstrap-4.3.1-dist/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo URL_BASE; ?>css/common2.css" rel="stylesheet">
@@ -44,15 +44,14 @@
 
 <div id="fixed_title" style="width:40%;max-width:320px"><img src="<?php echo URL_BASE; ?>img/fixed_title.png" style="width:100%" /></div>
 
-<div class="bannar">
-	<h1 class="bannar_text">
-		コーラルペイント
+<div id="head_title" style="background-image: url(<?php echo $data[2]['img_fp']; ?>);">
+	<h1 id="head_title_text">
+		<?php echo $data[2]['midasi1']; ?>
 	</h1>
 </div>
 
-
 <div id="header2" >
-	<img src="<?php echo URL_BASE; ?>img/header2.png" alt="Let's fix the house before it breaks"  style="width:70%" />
+	<img src="<?php echo $data[3]['img_fp']; ?>" alt="<?php echo $data[3]['midasi1']; ?>"  style="width:70%" />
 </div>
 	
 <div class="container-fluid" style="padding:0px">
