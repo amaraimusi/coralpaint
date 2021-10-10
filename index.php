@@ -27,12 +27,14 @@
 	<link rel='shortcut icon' href='img/favicon.ico' />
 	
 	<link href="<?php echo URL_BASE; ?>css/bootstrap-4.3.1-dist/bootstrap.min.css" rel="stylesheet">
+	<link href="<?php echo URL_BASE; ?>css/jquery-ui.css" rel="stylesheet">
 	<link href="<?php echo URL_BASE; ?>css/common2.css" rel="stylesheet">
 	<link href="<?php echo URL_BASE; ?>js/slick/slick.css" rel="stylesheet">
 	<link href="<?php echo URL_BASE; ?>js/slick/slick-theme.css" rel="stylesheet" />
 	<link href="<?php echo URL_BASE; ?>css/index.css" rel="stylesheet">
 	
 	<script src="<?php echo URL_BASE; ?>js/jquery.min.js"></script>
+	<script src="<?php echo URL_BASE; ?>js/jquery-ui.min.js"></script>
 	<script src="<?php echo URL_BASE; ?>js/bootstrap-4.3.1-dist/bootstrap.min.js"></script>
 	<script src="<?php echo URL_BASE; ?>js/vue.min.js"></script>
 	<script src="<?php echo URL_BASE; ?>js/livipage.js"></script>
@@ -44,10 +46,18 @@
 
 <div id="fixed_title" style="width:40%;max-width:320px"><img src="<?php echo URL_BASE; ?>img/fixed_title.png" style="width:100%" /></div>
 
-<div id="head_title" style="background-image: url(<?php echo $data[2]['img_fp']; ?>);">
-	<h1 id="head_title_text">
-		<?php echo $data[2]['midasi1']; ?>
-	</h1>
+<div style="height:290px;width:100%;">
+    <div id="head_title" style="display:none;background-image: url(<?php echo $data[2]['img_fp']; ?>);">
+    	<h1 id="head_title_text">
+    		<span id="head_title_text_a">CORAL PAINT</span><br>
+    		<?php echo $data[2]['midasi1']; ?>
+    	</h1>
+    </div>
+</div>
+<div style="width:50%;text-align:center">
+    <div style="width:50%;display:inline-block">
+    	<div id="test1" style="widht:400px;height:300px;display:none;background-color:#2b9f48">コーラルペイント</div>
+    </div>
 </div>
 
 <div id="header2" >

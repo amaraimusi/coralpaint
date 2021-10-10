@@ -11,9 +11,12 @@
 	color:white;
 	display: inline-block;
 	padding: 10px 20px;
-	font-size:32px;
+	font-size:2.2em;
 	font-weight:bold;
 	text-shadow: #030c03 1px 0 10px;
+}
+#head_title_text_a{
+	font-size:1.2em;
 }
 #head_title {
 	text-align: center;
@@ -65,14 +68,17 @@
 
 .back_img_a{
 	background-image:url('../img/back_img_a.jpg');
+	background-size:contain;
 }
 
 .back_img_b{
 	background-image:url('../img/back_img_b.jpg');
+	background-size:contain;
 }
 
 .back_img_c{
 	background-image:url('../img/back_img_c.jpg');
+	background-size:contain;
 }
 
 .belt_a{

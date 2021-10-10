@@ -10,4 +10,8 @@ $(()=>{
 		slidesToScroll: 3
 	});
 	
+
+	$("#head_title").show("drop", {"direction":"up"}, 1000);
+	
+	
 })

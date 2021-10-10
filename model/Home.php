@@ -123,7 +123,7 @@ class Home{
                 // アップロード型である場合
                 $img_fp = $ent['img_fp'];
                 $img_fp = '/coralpaint_mng/public/' . $img_fp;
-                $img_fp_md = str_replace( '/orig/', '/md/', $img_fp);
+                $img_fp_md = str_replace( '/orig/', '/mid/', $img_fp);
                 $ent['img_fp'] = $img_fp;
                 $ent['img_fp_md'] = $img_fp_md;
                 
@@ -134,7 +134,7 @@ class Home{
                 if(empty($aImgHm[$a_img_id])) continue;
                 $img_fp = $aImgHm[$a_img_id];
                 $ent['img_fp'] = $img_fp;
-                $img_fp_md = str_replace( '/orig/', '/md/', $img_fp);
+                $img_fp_md = str_replace( '/orig/', '/mid/', $img_fp);
                 $ent['img_fp_md'] = $img_fp_md;
             }
             
