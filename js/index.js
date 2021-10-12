@@ -13,5 +13,7 @@ $(()=>{
 
 	$("#head_title").show("drop", {"direction":"up"}, 1000);
 	
-	
+	setTimeout(function(){
+		$('#mail1').html('coralpaint.okinawa@gmail.com');
+	},2000);
 })

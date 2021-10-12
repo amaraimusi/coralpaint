@@ -31,7 +31,7 @@
 	<link href="<?php echo URL_BASE; ?>css/common2.css" rel="stylesheet">
 	<link href="<?php echo URL_BASE; ?>js/slick/slick.css" rel="stylesheet">
 	<link href="<?php echo URL_BASE; ?>js/slick/slick-theme.css" rel="stylesheet" />
-	<link href="<?php echo URL_BASE; ?>css/index.css" rel="stylesheet">
+	<link href="<?php echo URL_BASE; ?>css/index.css?v=1.0.1" rel="stylesheet">
 	
 	<script src="<?php echo URL_BASE; ?>js/jquery.min.js"></script>
 	<script src="<?php echo URL_BASE; ?>js/jquery-ui.min.js"></script>
@@ -40,7 +40,7 @@
 	<script src="<?php echo URL_BASE; ?>js/livipage.js"></script>
 	<script src="<?php echo URL_BASE; ?>js/ImgCompactK.js"></script>
 	<script src="<?php echo URL_BASE; ?>js/slick/slick.min.js"></script>
-	<script src="<?php echo URL_BASE; ?>js/index.js"></script>
+	<script src="<?php echo URL_BASE; ?>js/index.js?v=1.0.1"></script>
 </head>
 <body>
 
@@ -204,6 +204,16 @@
     	</div>
 
     </div>
+</div>
+
+<div class="belt_a"></div>
+
+<div style="text-align:center">
+	<div id="contact1" >
+		<p>お問い合わせ</p>
+		<div id="mail1" ></div>
+		<div style="margin-top:0.8em"><?php echo $data[18]['text1']?></div>
+	</div>
 </div>
 
 <div class="yohaku"></div>

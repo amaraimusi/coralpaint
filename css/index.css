@@ -113,5 +113,14 @@
 	min-height:75px;
 }
 
+#contact1{
+	font-size:1.6em;
+	display:iinline-block;
+	margin-top:40px;
+}
 
+#mail1{
+	margin-top:0.8em;
+	color:#c8534d;
+}
 
