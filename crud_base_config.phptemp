@@ -115,7 +115,7 @@ function getDbConfigForCrudBase($env = null){
 		'host'=>'localhost',
 		'db_name'=>'coralpaint',
 		'user'=>'root',
-		'pw'=>'neko',
+		'pw'=>'',
 	];
 	
 	
