@@ -14,6 +14,9 @@ $(()=>{
 	//$("#head_title").show("drop", {"direction":"up"}, 1000);
 	
 	setTimeout(function(){
-		$('.mail1').html('coralpaint.okinawa@gmail.com');
+		let mailElm = $('.mail1');
+		mailElm.html('coralpaint.okinawa@gmail.com');
+		mailElm.attr('href', 'mailto:coralpaint.okinawa@gmail.com');
+		
 	},100);
 })

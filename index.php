@@ -69,7 +69,7 @@
 <div style="text-align:center">
 	<div id="contact1" >
 		<p>お問い合わせ</p>
-		<div class="mail1" ></div>
+		<a class="mail1" href=""></a>
 		<div style="margin-top:0.8em"><?php echo $data[18]['text1']?></div>
 	</div>
 </div>
@@ -218,7 +218,7 @@
 
 
 
-<div style="padding:80px">
+<div style="padding-top:80px">
     <div class="row" style="margin-top:80px">
     	<div class="col-12 col-md-1"></div>
     	<div class="col-12 col-md-5">
@@ -240,7 +240,7 @@
 <div style="text-align:center">
 	<div id="contact1" >
 		<p>お問い合わせ</p>
-		<div class="mail1" ></div>
+		<a class="mail1" href=""></a>
 		<div style="margin-top:0.8em"><?php echo $data[18]['text1']?></div>
 	</div>
 </div>
