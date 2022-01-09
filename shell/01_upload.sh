@@ -12,4 +12,4 @@ rsync -auvz ../crud_base_config_p.php amaraimusi@amaraimusi.sakura.ne.jp:www/cor
 rsync -auvz ../index.php amaraimusi@amaraimusi.sakura.ne.jp:www/coralpaint/
 
 echo "------------ 送信完了"
-cmd /k
+#cmd /k
