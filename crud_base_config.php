@@ -26,16 +26,16 @@ define('CB_FLD_TA_CSV','8');// テキストエリアCSV出力用
 define('CRUD_BASE_VERSION', '1.0.0');
 
 // プロジェクトディレクトリの絶対ルートパス。 例→"C:\Users\user\git\CrudBase\laravel7\dev\"
-$crud_base_root = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'coralpaint_mng' . DIRECTORY_SEPARATOR; 
+$crud_base_root = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'coralpaint_mng/dev' . DIRECTORY_SEPARATOR; 
 define('CRUD_BASE_ROOT', $crud_base_root);
 
 // appディレクトリへの絶対パス。 例→
 $crud_base_app_path = $crud_base_root . 'app' . DIRECTORY_SEPARATOR;
 define('CRUD_BASE_APP_PATH', $crud_base_app_path);
 
-$crud_base_path = dirname(dirname(__FILE__)) . '/coralpaint_mng/CrudBase/php/CrudBase/';
+$crud_base_path = dirname(dirname(__FILE__)) . '/coralpaint_mng/dev/vendor/CrudBase/';
 
-$crud_base_project_path = '/coralpaint_mng'; // 例：「/animal/mng」
+$crud_base_project_path = '/coralpaint_mng/dev/public'; // 例：「/animal/mng」
 define('CRUD_BASE_PROJECT_PATH', $crud_base_project_path); // 基本URL(非推奨）
 define('CRUD_BASE_PATH', $crud_base_path);
 
@@ -43,8 +43,8 @@ $crud_base_url_base = $crud_base_project_path . '/';
 define('CRUD_BASE_URL_BASE', $crud_base_url_base); // 基本URL
 
 
-$crud_base_js = "/coralpaint_mng/CrudBase/js/CrudBase/dist/CrudBase.min.js?v=" . CRUD_BASE_VERSION;
-$crud_base_css = "/coralpaint_mng/CrudBase/css/CrudBase/dist/CrudBase.min.css?v=" . CRUD_BASE_VERSION;
+$crud_base_js = "/coralpaint_mng/dev/public/js/CrudBase/dist/CrudBase.min.js?v=" . CRUD_BASE_VERSION;
+$crud_base_css = "/coralpaint_mng/dev/public/js/CrudBase/dist/CrudBase.min.css?v=" . CRUD_BASE_VERSION;
 
 
 define('CRUD_BASE_JS', $crud_base_js);
