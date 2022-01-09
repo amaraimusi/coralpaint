@@ -47,7 +47,7 @@
 <div id="fixed_title" style="width:40%;max-width:320px"><img src="<?php echo URL_BASE; ?>img/fixed_title.png" style="width:100%" /></div>
 
 <div style="height:290px;width:100%;">
-    <div id="head_title" style="display:none;background-image: url(<?php echo $data[2]['img_fp']; ?>);">
+    <div id="head_title" style="background-image: url(<?php echo $data[2]['img_fp']; ?>);">
     	<h1 id="head_title_text">
     		<span id="head_title_text_a">CORAL PAINT</span><br>
     		<?php echo $data[2]['midasi1']; ?>
