@@ -31,7 +31,7 @@
 	<link href="<?php echo URL_BASE; ?>css/common2.css" rel="stylesheet">
 	<link href="<?php echo URL_BASE; ?>js/slick/slick.css" rel="stylesheet">
 	<link href="<?php echo URL_BASE; ?>js/slick/slick-theme.css" rel="stylesheet" />
-	<link href="<?php echo URL_BASE; ?>css/index.css?v=1.0.1" rel="stylesheet">
+	<link href="<?php echo URL_BASE; ?>css/index.css?v=1.0.2" rel="stylesheet">
 	
 	<script src="<?php echo URL_BASE; ?>js/jquery.min.js"></script>
 	<script src="<?php echo URL_BASE; ?>js/jquery-ui.min.js"></script>
@@ -40,7 +40,7 @@
 	<script src="<?php echo URL_BASE; ?>js/livipage.js"></script>
 	<script src="<?php echo URL_BASE; ?>js/ImgCompactK.js"></script>
 	<script src="<?php echo URL_BASE; ?>js/slick/slick.min.js"></script>
-	<script src="<?php echo URL_BASE; ?>js/index.js?v=1.0.1"></script>
+	<script src="<?php echo URL_BASE; ?>js/index.js?v=1.0.2"></script>
 </head>
 <body>
 
@@ -140,7 +140,7 @@
     <div class="row" style="margin-top:80px">
     
     	<div class="col-12 col-md-3">
-    		<div class="card border-primary mb-3">
+    		<div class="card border-primary mb-3 card_div2">
     	   		<h5 class="card-header">
     	   			<?php echo $data[14]['midasi1']?>
     	   		</h5>
@@ -156,7 +156,7 @@
     	</div>
     
     	<div class="col-12 col-md-3">
-    		<div class="card border-primary mb-3">
+    		<div class="card border-primary mb-3 card_div2">
     	   		<h5 class="card-header">
     	   			<?php echo $data[15]['midasi1']?>
     	   		</h5>
@@ -172,7 +172,7 @@
     	</div>
     
     	<div class="col-12 col-md-3">
-    		<div class="card border-primary mb-3">
+    		<div class="card border-primary mb-3 card_div2">
     	   		<h5 class="card-header">
     	   			<?php echo $data[16]['midasi1']?>
     	   		</h5>
@@ -187,8 +187,8 @@
 	   		</div>
     	</div>
     
-    	<div class="col-12 col-md-3">
-    		<div class="card border-primary mb-3">
+    	<div class="col-12 col-md-3 " >
+    		<div class="card border-primary mb-3 card_div2" >
     	   		<h5 class="card-header">
     	   			<?php echo $data[17]['midasi1']?>
     	   		</h5>

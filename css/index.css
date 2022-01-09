@@ -108,6 +108,9 @@
     right: -25px;
 }
 
+.card_div2{
+	min-height:360px;
+}
 .card_text_ex{
 	margin-top:0.8em;
 	min-height:75px;
