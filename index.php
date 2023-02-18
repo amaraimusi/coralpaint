@@ -71,6 +71,7 @@
 		<p>お問い合わせ</p>
 		<a class="mail1" href=""></a>
 		<div style="margin-top:0.8em"><?php echo $data[18]['text1']?></div>
+		<div>電話 080-3970-1643 (担当：上原）</div>
 	</div>
 </div>
 
