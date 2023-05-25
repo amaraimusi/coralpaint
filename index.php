@@ -1,20 +1,5 @@
 
-<?php 
-    require_once 'crud_base_config.php';
-    
-    require_once 'controller/HomeController.php';
-    $homeCon = new HomeController();
-    $box = $homeCon->indexAction();
-    $data = $box['data'];
-    $carousels = $box['carousels'];
 
-    if(strpos($_SERVER['SERVER_NAME'], 'localhost') !== false){
-	   define('URL_BASE', '/coralpaint/');
-    }else{
-	   define('URL_BASE', '/');
-    }
-
-?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -26,32 +11,31 @@
 	<title>コーラルペイント</title>
 	<link rel='shortcut icon' href='img/favicon.ico' />
 	
-	<link href="<?php echo URL_BASE; ?>css/bootstrap-4.3.1-dist/bootstrap.min.css" rel="stylesheet">
-	<link href="<?php echo URL_BASE; ?>css/jquery-ui.css" rel="stylesheet">
-	<link href="<?php echo URL_BASE; ?>css/common2.css" rel="stylesheet">
-	<link href="<?php echo URL_BASE; ?>js/slick/slick.css" rel="stylesheet">
-	<link href="<?php echo URL_BASE; ?>js/slick/slick-theme.css" rel="stylesheet" />
-	<link href="<?php echo URL_BASE; ?>css/index.css?v=1.0.2" rel="stylesheet">
+	<link href="css/bootstrap-4.3.1-dist/bootstrap.min.css" rel="stylesheet">
+	<link href="css/jquery-ui.css" rel="stylesheet">
+	<link href="css/common2.css" rel="stylesheet">
+	<link href="js/slick/slick.css" rel="stylesheet">
+	<link href="js/slick/slick-theme.css" rel="stylesheet" />
+	<link href="css/index.css?v=1.0.2" rel="stylesheet">
 	
-	<script src="<?php echo URL_BASE; ?>js/jquery.min.js"></script>
-	<script src="<?php echo URL_BASE; ?>js/jquery-ui.min.js"></script>
-	<script src="<?php echo URL_BASE; ?>js/bootstrap-4.3.1-dist/bootstrap.min.js"></script>
-	<script src="<?php echo URL_BASE; ?>js/vue.min.js"></script>
-	<script src="<?php echo URL_BASE; ?>js/livipage.js"></script>
-	<script src="<?php echo URL_BASE; ?>js/ImgCompactK.js"></script>
-	<script src="<?php echo URL_BASE; ?>js/slick/slick.min.js"></script>
-	<script src="<?php echo URL_BASE; ?>js/index.js?v=1.0.2"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/bootstrap-4.3.1-dist/bootstrap.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script src="js/livipage.js"></script>
+	<script src="js/ImgCompactK.js"></script>
+	<script src="js/slick/slick.min.js"></script>
+	<script src="js/index.js?v=1.0.2"></script>
 </head>
 <body>
 
-<div id="fixed_title" style="width:40%;max-width:320px"><img src="<?php echo URL_BASE; ?>img/fixed_title.png" style="width:100%" /></div>
+<div id="fixed_title" style="width:40%;max-width:320px"><img src="img/fixed_title.png" style="width:100%" /></div>
 
 <div style="height:290px;width:100%;">
-    <div id="head_title" style="background-image: url(<?php echo $data[2]['img_fp']; ?>);">
+    <div id="head_title" style="background-image: url(storage/Content/y2022/2/12661dab2fcb2f00/orig/DSC_0008.JPG);">
     	<h1 id="head_title_text">
     		<span id="head_title_text_a">CORAL PAINT</span><br>
-    		<?php echo $data[2]['midasi1']; ?>
-    	</h1>
+    		コーラルペイント    	</h1>
     </div>
 </div>
 <div style="width:50%;text-align:center">
@@ -61,7 +45,7 @@
 </div>
 
 <div id="header2" >
-	<img src="<?php echo $data[3]['img_fp']; ?>" alt="<?php echo $data[3]['midasi1']; ?>"  style="width:70%" />
+	<img src="storage/Content/y2022/3/43761da826872b3c/orig/header2.png" alt="Let's fix the house before it breaks"  style="width:70%" />
 </div>
 	
 <div class="container-fluid" style="padding:0px">
@@ -70,7 +54,7 @@
 	<div id="contact1" >
 		<p>お問い合わせ</p>
 		<a class="mail1" href=""></a>
-		<div style="margin-top:0.8em"><?php echo $data[18]['text1']?></div>
+		<div style="margin-top:0.8em">沖縄県北谷</div>
 		<div>電話 080-3970-1643 (担当：上原）</div>
 	</div>
 </div>
@@ -79,15 +63,21 @@
 <div class="row" style="margin-top:40px">
 	<div class="col-12 col-md-6">
 		<div >
-			<img src="<?php  echo $data[4]['img_fp_md']; ?>" class="img_a"  />
+			<img src="rsc/a_imgs/mid/2021-01-14_130208_DSC_0241.jpg" class="img_a"  />
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
 		<div class="text_a back_img_a">
 			<div>
-				<h3 class="text_a_midasi"><?php echo $data[4]['midasi1']; ?></h3>
+				<h3 class="text_a_midasi">コーラルペイントはこんな仕事をします</h3>
 			</div>
-			<div class="text_a_body" ><?php echo $data[4]['text1']; ?></div>
+			<div class="text_a_body" >そろそろ塗り替えが必要だと考えたことはありませんか？
+色落ちや小さなひび割れから大きなひび割れまでお任せください。
+
+コーラルペイントは、お客様のニーズに合わせ、ぴったりのお住いのメンテナンスを致します。
+お見積りは無料で喜んでお宅に伺います。まずはお気軽にお問い合わせください。
+
+沖縄県にて活動してます。</div>
 		</div>
 	</div>
 </div><!--  row　区分1-1と1-2 -->
@@ -100,14 +90,16 @@
 	<div class="col-12 col-md-6">
 		<div class="text_a back_img_b">
 			<div>
-				<h3 class="text_a_midasi"><?php echo $data[5]['midasi1']; ?></h3>
+				<h3 class="text_a_midasi">家にこんな症状はありませんか。</h3>
 			</div>
-				<div class="text_a_body" ><?php echo $data[5]['text1']; ?></div>
+				<div class="text_a_body" >コンクリートの壁にひびわれが生じている場合、徐々に劣化が進んでいます。
+症状が進むと鉄筋内部まで影響が及び、修理費が多額になります。
+そうなる前に補修が必要です。</div>
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
 		<div >
-			<img src="<?php  echo $data[5]['img_fp_md']; ?>" class="img_a"  />
+			<img src="rsc/a_imgs/mid/2020-11-25_131743_DSC_0130.jpg" class="img_a"  />
 		</div>
 	</div>
 </div><!--  row　区分1-1と1-2 -->
@@ -118,15 +110,21 @@
 <div class="row" style="margin-top:80px">
 	<div class="col-12 col-md-6">
 		<div >
-			<img src="<?php  echo $data[6]['img_fp_md']; ?>" class="img_a"  />
+			<img src="rsc/a_imgs/mid/2020-12-01_170950_DSC_0152.jpg" class="img_a"  />
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
 		<div class="text_a back_img_c">
 			<div>
-				<h3 class="text_a_midasi" ><?php echo $data[6]['midasi1']; ?></h3>
+				<h3 class="text_a_midasi" >塗装工事の流れ</h3>
 			</div>
-			<div class="text_a_body" ><?php echo $data[6]['text1']; ?></div>
+			<div class="text_a_body" >家屋の外壁塗装である場合、以下のような感じで行われます。（※ 状況によって作業は異なることがあります）
+・仮説足場やシートを設置。
+・高圧洗浄などの汚れ落とし。
+・下地の調整やひび割れの修復。
+・塗装作業
+・最終確認と調整
+・足場解体とシートはずして終わり。</div>
 		</div>
 	</div>
 </div><!--  row　区分1-1と1-2 -->
@@ -136,12 +134,7 @@
 <div class="carousel_w" >
     <div id="carousel1" >
     
-    	<?php
-    	   foreach($carousels as $crsEnt){
-    		  echo "<img src='{$crsEnt['img_fp_md']}' style='width:100%' />";
-    	   }
-    	?>
-    
+    	<img src='rsc/a_imgs/mid/2020-11-24_092200_DSC_0103.jpg' style='width:100%' /><img src='rsc/a_imgs/mid/2020-11-25_131802_DSC_0131.jpg' style='width:100%' /><img src='rsc/a_imgs/mid/2020-12-01_171003_DSC_0154.jpg' style='width:100%' /><img src='rsc/a_imgs/mid/2020-12-07_172946_DSC_0163.jpg' style='width:100%' /><img src='rsc/a_imgs/mid/2020-12-14_142413_DSC_0172.jpg' style='width:100%' /><img src='rsc/a_imgs/mid/2020-12-01_171041_DSC_0155.jpg' style='width:100%' /><img src='rsc/a_imgs/mid/2020-12-01_171050_DSC_0157.jpg' style='width:100%' /><img src='rsc/a_imgs/mid/2020-12-22_151428_DSC_0196.jpg' style='width:100%' /><img src='rsc/a_imgs/mid/2021-01-14_130638_DSC_0249.jpg' style='width:100%' />    
     </div>
 </div>
 
@@ -151,15 +144,13 @@
     	<div class="col-12 col-md-3">
     		<div class="card border-primary mb-3 card_div2">
     	   		<h5 class="card-header">
-    	   			<?php echo $data[14]['midasi1']?>
-    	   		</h5>
+    	   			洗浄    	   		</h5>
     	   		<div class="card-body">
     	   			<div class="card-text">
-    	   				<img src="<?php echo $data[14]['img_fp_md']; ?>" style="width:100%"  />
+    	   				<img src="rsc/a_imgs/mid/2020-11-24_092200_DSC_0103.jpg" style="width:100%"  />
     	   			</div>
     	   			<div class="card-text card_text_ex" >
-    	   				<?php echo $data[14]['text1']?>
-    	   			</div>
+    	   				高圧洗浄により壁のカビなどの汚れを落とします。    	   			</div>
     	   		</div>
 	   		</div>
     	</div>
@@ -167,15 +158,14 @@
     	<div class="col-12 col-md-3">
     		<div class="card border-primary mb-3 card_div2">
     	   		<h5 class="card-header">
-    	   			<?php echo $data[15]['midasi1']?>
-    	   		</h5>
+    	   			ひびの補修    	   		</h5>
     	   		<div class="card-body">
     	   			<div class="card-text">
-    	   				<img src="<?php echo $data[15]['img_fp_md']; ?>" style="width:100%"  />
+    	   				<img src="rsc/a_imgs/mid/2020-12-01_171003_DSC_0154.jpg" style="width:100%"  />
     	   			</div>
     	   			<div class="card-text card_text_ex">
-    	   				<?php echo $data[15]['text1']?>
-    	   			</div>
+    	   				コンクリートのヒビ割れはほっておくと悪化します。そうなる前に補修します。
+ヒビ割れにシーリングを充填、または状態次第でサビ止めも塗布します。    	   			</div>
     	   		</div>
 	   		</div>
     	</div>
@@ -183,14 +173,14 @@
     	<div class="col-12 col-md-3">
     		<div class="card border-primary mb-3 card_div2">
     	   		<h5 class="card-header">
-    	   			<?php echo $data[16]['midasi1']?>
-    	   		</h5>
+    	   			下地補修    	   		</h5>
     	   		<div class="card-body">
     	   			<div class="card-text">
-    	   				<img src="<?php echo $data[16]['img_fp_md']; ?>" style="width:100%"  />
+    	   				<img src="rsc/a_imgs/mid/2020-12-22_151343_DSC_0190.jpg" style="width:100%"  />
     	   			</div>
     	   			<div class="card-text card_text_ex">
-    	   				<?php echo $data[16]['text1']?>
+    	   				ヒビ割れにシーリングを充填後、サビ止めの塗布します。そして下地を塗料の塗ります。
+この工程により塗料の耐久年数を上げ、また上塗りが美しく仕上がります。
     	   			</div>
     	   		</div>
 	   		</div>
@@ -199,15 +189,13 @@
     	<div class="col-12 col-md-3 " >
     		<div class="card border-primary mb-3 card_div2" >
     	   		<h5 class="card-header">
-    	   			<?php echo $data[17]['midasi1']?>
-    	   		</h5>
+    	   			上塗り    	   		</h5>
     	   		<div class="card-body">
     	   			<div class="card-text">
-    	   				<img src="<?php echo $data[17]['img_fp_md']; ?>" style="width:100%"  />
+    	   				<img src="rsc/a_imgs/mid/2021-01-14_130215_DSC_0242.jpg" style="width:100%"  />
     	   			</div>
     	   			<div class="card-text card_text_ex">
-    	   				<?php echo $data[17]['text1']?>
-    	   			</div>
+    	   				いくつか工程を終え、最後に上塗ります。    	   			</div>
     	   		</div>
 	   		</div>
     	</div>
@@ -242,7 +230,7 @@
 	<div id="contact1" >
 		<p>お問い合わせ</p>
 		<a class="mail1" href=""></a>
-		<div style="margin-top:0.8em"><?php echo $data[18]['text1']?></div>
+		<div style="margin-top:0.8em">沖縄県北谷</div>
 	</div>
 </div>
 
