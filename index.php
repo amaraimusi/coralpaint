@@ -32,7 +32,7 @@
 <div id="fixed_title" style="width:40%;max-width:320px"><img src="img/fixed_title.png" style="width:100%" /></div>
 
 <div style="height:290px;width:100%;">
-    <div id="head_title" style="background-image: url(storage/Content/y2022/2/12661dab2fcb2f00/orig/DSC_0008.JPG);">
+    <div id="head_title" style="background-image: url(img/DSC_0008.JPG);">
     	<h1 id="head_title_text">
     		<span id="head_title_text_a">CORAL PAINT</span><br>
     		コーラルペイント    	</h1>
@@ -45,7 +45,7 @@
 </div>
 
 <div id="header2" >
-	<img src="storage/Content/y2022/3/43761da826872b3c/orig/header2.png" alt="Let's fix the house before it breaks"  style="width:70%" />
+	<img src="img/header2.png" alt="Let's fix the house before it breaks"  style="width:70%" />
 </div>
 	
 <div class="container-fluid" style="padding:0px">
